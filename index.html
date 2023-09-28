@@ -12,6 +12,7 @@
         }
         :root {
             --main-color : #100B20;
+            --background-color : #150E28;
             --sub-color: #D434FE;
             --mobile-text-size: 16px;
             --desktop-text-size:16px;
@@ -23,7 +24,7 @@
           width: var(--images-width); 
         }
         body {
-            background-color: var(--main-color);
+            background-color: var(--background-color);
             color: white;
         }
         header{
@@ -122,7 +123,7 @@
         .section-two .image img , .section-three .image img , .section-four .image img ,.section-five .image img{
             width: 90%;
         }
-        .section-two .para ,  .section-three .para ,.section-four .para , .section-six .para , .section-seven .para{
+        .section-two .para ,  .section-three .para ,.section-four .para , .section-six .para , .section-seven .para , .section-eight .para , .section-nine .para{
             text-align: center;
             width: 90%;
             margin: 50px auto;
@@ -276,7 +277,7 @@
             justify-content: space-around;
         }
         .section-seven .the-price div{
-            width: 33.3%;
+        
              border: 1px solid var(--sub-color);
              padding: 20px;
              border-radius: 20px;
@@ -285,8 +286,7 @@
              position: relative;
         }
         .section-seven .the-price div:nth-of-type(2) {
-            height: fit-content;
-            width: fit-content;
+            
         }
           .section-seven .the-price div:nth-of-type(2) img{
             
@@ -302,7 +302,106 @@
           margin-top: -100px;
           margin-bottom: 20px;
          }
-
+        .section-eight {
+            width: 90%;
+            margin: 0 auto;
+        }
+        .section-eight .icons {
+            width: 100%;
+            margin: 0 auto;
+            padding: 50px;
+            border: 2px solid var(--sub-color);
+            display: grid;
+            grid-template-columns:  1fr 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .section-eight .icons div:nth-of-type(1) ,.section-eight .icons div:nth-of-type(2){
+          border-right: 2px solid var(--sub-color);
+          padding: 15px;
+        }
+        .section-eight .icons div:nth-of-type(4) ,.section-eight .icons div:nth-of-type(5){
+            border-top:2px solid var(--sub-color) ;
+            padding: 15px;
+            border-right: 2px solid var(--sub-color);
+        }
+        .section-nine{
+            margin-top: 100px;
+            width: 90%;
+            margin: 0 auto;
+        }
+        .section-nine .big-container {
+            width: 90%;
+            margin: 0 auto;
+            line-height: 30px;
+            text-align: center;
+            position: relative;
+            padding: 30px;
+            border: 1px solid var(--sub-color);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .section-nine .big-container::before{
+            position: absolute;
+            content: "";
+            inset: 0;
+            background-color: var(--sub-color);
+            filter: opacity(10%);
+        }
+        .section-nine .big-container button {
+            width: 100px;
+        }
+        .section-nine .image {
+            width: 90%;
+            margin: 100px auto;
+            position: relative;
+        }
+        .section-nine .image img{
+            width: 90%;
+        }
+        .section-nine .image div:last-child {
+           position: absolute;
+           top: 120px;
+        }
+        footer {
+            margin-top: 100px;
+            padding-top:200px ;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        footer .containe:first-child h2 , footer .containe:first-child p{
+            padding-bottom: 30px;
+        }
+        footer .containe:first-child ul {
+            display: flex;
+            gap: 30px;
+        }
+        footer .containe:first-child ul li:first-child {
+            border-right: 2px solid var(--sub-color);
+            padding-right: 30px;
+        }
+        footer ul {
+            list-style-type: none;
+        }
+        footer ul a {
+            text-decoration: none;
+            color: white;
+        }
+        footer img{
+            width: 20px;
+            height: 15px;
+        }
+        footer .containe:nth-of-type(2) ul .icon {
+            display: inline;
+        }
+        footer .containe:nth-of-type(2) ul .icon img{
+            margin: 0px 3px;
+        }
     </style>
 </head>
 <body>
@@ -549,7 +648,7 @@
                     <p>N150,000</p>
             </div>
         </section>
-        <section class="section-8 partners">
+        <section class="section-eight partners">
            <div class="para">
             <h2>Partners and Sponsors</h2>
             <p>Getlinked Hackathon 1.0 is honored to have the
@@ -565,16 +664,17 @@
             <div class="icons-Btn"><img src="images/icon/Vizual Plus.png" alt="icons-image"></div>
            </div>
         </section>
-        <section class="section-9">
+        <section class="section-nine">
             <div class="container">
             <div class="para">
-                <h2>Privacy Policy and <span>Terms</span>
+                <h2>Privacy Policy and <br>
+                     <span>Terms</span>
                 <p>Last updated on September 12, 2023</p></h2>
                 <p>Below are our privacy & policy, which outline a 
                     lot of goodies. it’s our aim to always take of our 
                     participant</p>
             </div>
-            <div>
+            <div class="big-container">
                 <p>At getlinked tech Hackathon 1.0, we 
                     value your privacy and are committed 
                     to protecting your personal information.
@@ -606,7 +706,7 @@
     </main>
     <footer>
         <div class="containe">
-            <h2>getlinked</h2>
+            <h2>get<span style="color: var(--sub-color);">linked</span></h2>
             <p>Getlinked Tech Hackathon is a technology
                 innovation program established by a group 
                 of organizations with the aim of showcasing 
@@ -619,13 +719,13 @@
         </div>
         <div class="containe">
             <h3>Useful links</h3>
-            <ul>
+            <ul style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
                 <li><a href="#">Timeline</a></li>
                 <li><a href="#">Overview</a></li>
                 <li><a href="#">FAQs</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Rgister</a></li>
-                <li>Follow us <div class="icon">
+                <li style="color: var(--sub-color);">Follow us <div class="icon">
                    <img src="images/icon/mdi_instagram.png" alt="">
                    <img src="images/icon/Vector.png" alt="">
                    <img src="images/icon/Vector (1).png" alt="">
@@ -634,9 +734,11 @@
             </ul>
         </div>
         <div class="containe">
-            <h2>Contact Us</h2>
-            <p><span><img src="images/icon/Vector (2).png" alt=""></span></p>
-            <p><span><img src="images/icon/Group.png" alt=""></span></p>
+            <h4 style="color: var(--sub-color); margin-bottom: 10px;">Contact Us</h4>
+            <p style="margin-bottom: 20px;"><span><img src="images/icon/Group.png" alt="" style="margin-right: 10px;"></span> +234 &nbsp; 670765344</p>
+            <p><span><img src="images/icon/Vector (2).png" alt=""></span> <p>27, Alara Street <br>
+            Yaba 1000012 <br>
+          Lagos State</p></p>
         </div>
         <div>
             <p>All rights reserved. © getlinked Ltd.</p>
