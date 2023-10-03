@@ -20,66 +20,77 @@
             --images-width:100px;
             --gradient:270deg, #903AFF 0%, #D434FE 56.42%, #FF26B9 99.99%, #FE34B9 100%;
         }
-        img {
-          width: var(--images-width); 
-        }
+  @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Montserrat:wght@600&family=Righteous&display=swap');
         body {
             background-color: var(--background-color);
             color: white;
+            position: relative;
         }
         header{
+            position: fixed;
+            z-index: 1000;
             width: 100%;
             height: 70px;
             border-bottom: 1px solid white;
         }
-        .header-content{
-            padding: 20px 0px 0px 20px;
-            width: 90%;
+        header .icon {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+        header .icon img{
+            width: 20px;
+            object-fit:cover ;
+        }
+        header .header-content {
+            width: 80%;
             margin: 0 auto;
+            margin-top: 30px;
             display: flex;
             justify-content: space-between;
-            font-size: var(--mobile-text-size);
         }
-        .header-content .name p{
-            margin-left: 0px;
+        header .header-content .name{
+             margin-left: 20px;
         }
-        .header-content .name p span{
-            color: var(--sub-color);
+        header .header-content .links{
+            display: none;
+            margin-right: -13%;
+            justify-self: flex-end;
         }
-        .header-content .links ul{
-           list-style-type: none;
-           display: none;
-           background-color: var(--sub-color);
-           padding: 20px 70px;
-           margin-top: -17px;
-           z-index: 10000;
-           background-color: var(--main-color);
-           box-shadow: 1px 1px 1px white;
-        }
-        .header-content .links ul li{
-            padding: 20px 0px;
-        }
-         .header-content .links ul li a{
+         header .header-content .links ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: left;
+            background-color: var(--sub-color);
+            padding: 30px 70px;
+         }
+         header .header-content .links ul li:last-child{
+            margin: 30px 0px;
+            background-color: #150E28;
+            padding: 10px 20px;
+         }
+         header .header-content .links ul li a{
             text-decoration: none;
             color: white;
          }
-        .header-content .icon{
-            width : 50px;
-            font-size: 30px;
-            justify-self: flex-end;
-        }
         .section-one{
          padding: 50px 0px;
          text-align: center;
          width: 100%;
+         z-index: -11111;
+         font-family: 'Montserrat', sans-serif;
         }
         .section-one .firs-para{
-            margin-bottom: 20px;
+            margin: 50px 0px;
+
         }
         .section-one .firs-para span{
             border-bottom: 3px solid var(--sub-color);
             border-radius: 50px;
             padding-bottom: 3px;
+            font-family: cla;
         }
         .section-one .second-para{
             width: 250px;
@@ -98,10 +109,12 @@
             border-radius: 5px;
         }
         .section-one img {
-            width: 100%;
+          max-width: 500px;
+          object-fit: cover;  
         }
         .section-one .image{
-            width: 100%;
+            width: 500px;
+            height: 500px;
             position: relative;
         }
         .section-one .image div:first-child{
@@ -116,12 +129,13 @@
             width: 100%;
             margin: 0 auto;
         }
-        .section-two .image , .section-three .image, .section-four .image,.section-five .image{
-            width: 100%;
-            text-align: center;
+        .section-two .image , .section-three .image, .section-four .image,.section-five .image ,.section-nine .image{
+            width: 500px;
+            height: 500px;
         }
-        .section-two .image img , .section-three .image img , .section-four .image img ,.section-five .image img{
-            width: 90%;
+        .section-two .image img , .section-three .image img , .section-four .image img ,.section-five .image img ,.section-nine .image img{
+            max-width: 500px;
+          object-fit: cover;  
         }
         .section-two .para ,  .section-three .para ,.section-four .para , .section-six .para , .section-seven .para , .section-eight .para , .section-nine .para{
             text-align: center;
@@ -267,68 +281,104 @@
         .section-seven .image-cup img{
             width: 100%;
         }
-        .section-seven .the-price {
-            width: 80%;
+        .section-seven .container-for-price {
+            width: 100%;
+            margin: 150px auto;
+        }
+        .section-seven .container-for-price .the-price {
+            width: fit-content;
             margin: 0 auto;
-            margin-top: 200px;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 20px;
+        }
+        .section-seven .container-for-price .the-price div{
+            max-width: 150px;
+            padding: 10px 0px;
             text-align: center;
-            justify-content: space-around;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border: 1px solid var(--sub-color);
+            border-radius: 10px;
         }
-        .section-seven .the-price div{
-        
-             border: 1px solid var(--sub-color);
-             padding: 20px;
-             border-radius: 20px;
-             height: 150px;
-             text-align: center;
-             position: relative;
+        .section-seven .container-for-price .the-price div img{
+            margin-top: -50%;
         }
-        .section-seven .the-price div:nth-of-type(2) {
-            
+        .section-seven .container-for-price .the-price .first-place img{
+            transform: scale(1.5);
+            margin-top: -100px;
+            margin-bottom: 40px;
         }
-          .section-seven .the-price div:nth-of-type(2) img{
-            
-          }
-         .section-seven .the-price div::before {
-        content: " ";
-        position: absolute;
-        inset: 0;
-        background-color: var(--sub-color);
-        filter: opacity(10%);
-         }
-         .section-seven .the-price div img{
-          margin-top: -100px;
-          margin-bottom: 20px;
-         }
         .section-eight {
             width: 90%;
-            margin: 0 auto;
+            margin: 200px auto;
         }
         .section-eight .icons {
             width: 100%;
             margin: 0 auto;
-            padding: 50px;
-            border: 2px solid var(--sub-color);
+            border: 1px solid var(--sub-color);
+            padding: 20px;
             display: grid;
-            grid-template-columns:  1fr 1fr 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(3,1fr);
+           gap: 20px;
         }
-        
-        .section-eight .icons div:nth-of-type(1) ,.section-eight .icons div:nth-of-type(2){
-          border-right: 2px solid var(--sub-color);
-          padding: 15px;
+        .section-eight .icons div{
+            position: relative;
+            padding: 10px;
         }
-        .section-eight .icons div:nth-of-type(4) ,.section-eight .icons div:nth-of-type(5){
-            border-top:2px solid var(--sub-color) ;
-            padding: 15px;
-            border-right: 2px solid var(--sub-color);
+        .section-eight .icons div:first-child::before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 90%;
+            top: 0;
+            right: 0;
+            background-color: var(--sub-color);
         }
-        .section-nine{
-            margin-top: 100px;
+        .section-eight .icons div:first-child::after {
+            content: "";
+            position: absolute;
             width: 90%;
-            margin: 0 auto;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--sub-color);
+        }
+        .section-eight .icons div:nth-of-type(2)::before  , .section-eight .icons div:nth-of-type(4)::after ,.section-eight .icons div:nth-of-type(5)::after{
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 90%;
+            top: 0;
+            right: 0;
+            background-color: var(--sub-color);
+        }
+        .section-eight .icons div:nth-of-type(2)::after  {
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--sub-color);
+        }
+        .section-eight .icons div:nth-of-type(3)::after {
+            content: "";
+            position: absolute;
+            width: 90%;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--sub-color);
+        }
+        .section-eight .icon .icon-Btn {
+            width: 40px;
+            height: 30px;
+        }
+        .section-eight .icons .icons-Btn img{
+            object-fit: cover;
+            width: 40px;
         }
         .section-nine .big-container {
             width: 90%;
@@ -365,6 +415,14 @@
            position: absolute;
            top: 120px;
         }
+       .section-nine .span{
+        width: 20px;
+        height: 20px;
+       }
+       .section-nine .span img{
+        width: 15px;
+        object-fit: cover;
+       }
         footer {
             margin-top: 100px;
             padding-top:200px ;
@@ -402,6 +460,123 @@
         footer .containe:nth-of-type(2) ul .icon img{
             margin: 0px 3px;
         }
+        footer .Contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .image{
+        width: 800px;
+        height: 800px;
+       } 
+       .image img {
+        width: 800px;
+        object-fit: cover;
+       }
+        footer .Contact .contact {
+            display: flex;
+            gap: 20px;
+        }
+      /* ANIMATIONS */ 
+       .animation {
+        animation: mageAni 5s ease-in-out  infinite;
+       }
+       @keyframes mageAni {
+        0%{transform: rotate(0deg);}
+        25%{transform: rotate(90deg);}
+        50%{transform: rotate(180deg);}
+        75%{transform: rotate(270deg);}
+        100%{transform: rotate(360deg);}
+       }
+
+       /* RESPONSIVENESS */
+
+       @media screen and (min-width :800px) {    
+       .image{
+        width: 800px;
+        height: 800px;
+       } 
+       .image img {
+        width: 800px;
+        object-fit: cover;
+       }
+        .section-one {
+            display: flex;
+            flex-direction: column;
+        }
+        .section-one article:first-child {
+            width: 90%;
+        }
+        .section-one article:first-child .firs-para {
+            float: right;
+        }
+        .section-one article:last-child {
+            display: flex;
+            margin: 0 auto;
+            width: 90%;
+        }
+        .section-one article:last-child aside:first-child{
+            text-align: left;
+            align-self: center;
+            font-size: 24px;
+        }
+        .section-one .second-para p {
+            font-size: 12px;
+        }
+        .section-two ,.section-four ,.section-nine{
+            width: 80%;
+            display: flex;
+            gap: 10%;
+        }
+        .section-two .para , .section-three .para {
+            text-align: left;
+            align-self: center;
+        }
+        .section-four .para {
+            text-align: left;
+        }
+        .section-four .para p {
+            padding: 7px;
+        }
+        .section-four .image{
+            align-self: center;
+        }
+        .section-five {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .section-five .para{
+            text-align: left;
+            font-size: 16px;
+        }
+        .section-three {
+            width: 80%;
+         display: flex;
+         gap: 10%;
+         flex-direction: row-reverse;
+        }
+        .section-seven {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 200px 200px;
+        }
+        .section-seven .para{
+         grid-column-start: 2;
+         text-align: left;
+        }
+        .section-eight .icon .icon-Btn {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+        }
+        .section-eight .icons .icons-Btn img{
+            object-fit: cover;
+            width: 100px;
+        }
+        footer {
+            flex-direction: row;
+        }
+       }
     </style>
 </head>
 <body>
@@ -411,7 +586,7 @@
                 <p>gets<span>linked</span></p>
             </div>
                <div class="icon">
-                    <span>=</span>
+                    <img src="images/Vector.png" alt="">
                 </div>
             <div class="links">
              
@@ -424,12 +599,17 @@
                 </ul>
             </div>
         </div>
+        <script src="script.js"></script>
     </header>
     <main>
         <section class="section-one">
+        <article class = "containeit"  style="justify-self: flex-end;">
             <div class="firs-para">
                <p>Igniting a Revolution in <span>HR Innovation</span></p>
             </div>
+        </article>
+        <article class="containit2">
+            <aside>
             <div class="second-para">
               <h2>getlinked Tech Hackathon 1.0 ***</h2>
               <p>Paricipate in getlinked tech Hackathon 2023 stand a chance to win a big price</p>
@@ -440,14 +620,16 @@
             <div class="timer">
                 <p class="timer"></p>
             </div>
+            </aside>
             <div class="image">
                 <div>
                 <img src="images/man-wearing-smart-glasses-touching-virtual-screen 1.png" alt="image wearing glases">
                 </div>
-                <div>
-                <img src="images/Image 1.png" alt="">
+                <div> 
+                <img src="images/Image 1.png" alt="" class="animation">
                 </div>
             </div>
+        </article>
         </section>
         <section class="section-two">
             <div class="image">
@@ -605,7 +787,7 @@
           <div class="card-container">
             <div class="straight-circle">
                 <div class="straight"></div>
-                <div class="circle">6</div>
+                <div class="circle">6</div> 
             </div>
             <div class="content">
                 <p>Demo Day </p>
@@ -628,6 +810,7 @@
             <div class="image-cup">
                 <img src="images/9486889 1.png" alt="">
             </div>
+            <div class="container-for-price">
             <div class="the-price">
                 <div class="second-place">
                     <img src="images/silver_medal 1.png" alt="">
@@ -647,15 +830,17 @@
                     Runner</p>
                     <p>N150,000</p>
             </div>
+            </div>
+            </div>
         </section>
-        <section class="section-eight partners">
+            <section class="section-eight">
            <div class="para">
             <h2>Partners and Sponsors</h2>
             <p>Getlinked Hackathon 1.0 is honored to have the
                 following major companies as its partners and 
                sponsors</p>
            </div>
-           <div class="icons">
+           <div class="icons"> 
             <div class="icons-Btn"><img src="images/icon/Liberty company logo white colour.png" alt="icons-image"></div>
             <div class="icons-Btn"><img src="images/icon/Liberty company logo white.png" alt="icons-image"></div>
             <div class="icons-Btn"><img src="images/icon/Winwise logo White colour 1.png" alt="icons-image"></div>
@@ -685,11 +870,11 @@
                     consent to the practices described in this 
                     policy.</p>
                     <p><span>Licensing Policy</span>Here are terms of our Standard License:</p>
-                    <p><input type="checkbox" name="checkbox" id="checkbox">
+                    <p> <span class="span"><img src="images/list terms.png" alt=""></span>
                         The Standard License grants you a 
                         non-exclusive right to navigate and 
                         register for our event</p>
-                    <p><input type="checkbox" name="checkbox" id="checkbox">
+                    <p><span class="span"><img src="images/list terms.png" alt=""></span>
                         You are licensed to use the item 
                         available at any free source sites, for 
                         your project developement</p>
@@ -735,14 +920,26 @@
         </div>
         <div class="containe">
             <h4 style="color: var(--sub-color); margin-bottom: 10px;">Contact Us</h4>
-            <p style="margin-bottom: 20px;"><span><img src="images/icon/Group.png" alt="" style="margin-right: 10px;"></span> +234 &nbsp; 670765344</p>
-            <p><span><img src="images/icon/Vector (2).png" alt=""></span> <p>27, Alara Street <br>
-            Yaba 1000012 <br>
-          Lagos State</p></p>
+            <div class="Contact">
+              <div class="contact">
+                <div><img src="images/icon/Group.png" alt=""></div>
+                    <p>+234 &nbsp; 670765344 </p>
+              </div>
+              <div class="contact">
+                <div><img src="images/icon/Vector (2).png" alt=""></div>
+                    <p>27, Alara Street <br>
+                       Yaba 1000012 <br>
+                      Lagos State </p>
+              </div>
+            </div>
         </div>
         <div>
             <p>All rights reserved. © getlinked Ltd.</p>
         </div>
     </footer>
 </body>
+<!--27, Alara Street 
+            Yaba 1000012 
+          Lagos State-- 
+          +234 &nbsp; 670765344  >
 </html>
